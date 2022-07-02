@@ -15,14 +15,20 @@
         *{
             padding: 0;
             margin: 0;
-            box-sizing: border-box;
+        }
+
+        body,html {
+            height: 100%;
+            
         }
 
         body{
             background-color: #23232e;
             color: var(--tema);
             font-family: 'Courier New', Courier, monospace;
-            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             
         }
 
@@ -30,7 +36,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 100%;
+            width: 100%;
         }
 
         #container #relogio {
@@ -44,6 +51,7 @@
             font-weight: 500;
             border-radius: 20px;
             border: 7px solid var(--tema);
+            cursor:default ;
 
         }
 
@@ -59,14 +67,13 @@
             font-weight: 500;
             position: relative;
             border-radius: 20px;
-
         }
 
         #relogio div::before {
             content: 'Horas';
             position: absolute;
             font-size: 0.2em;
-            top: 40px;
+            top: 4%;
 
         }
         #relogio div#minuto::before {
@@ -102,15 +109,26 @@
 
         @media(max-width:600px) {
 
+            body{
+            }
+
+            #container{
+
+            }
+
+
+
             #container #relogio{
                 flex-direction: column;
                 justify-content: center !important;
                 align-items: center !important;
-                height: 90vh !important;
+                height: 60vh !important;
+                width: 50%;
+                
             }
             
 
-            #relogio div{
+            #container #relogio div{
 
                 height: 150px !important;
             }
@@ -118,7 +136,7 @@
             #relogio div::before {
 
             font-size: 14px;
-            top: 7px;
+            top: ;
 
             }
 
